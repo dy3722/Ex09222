@@ -16,24 +16,33 @@ import androidx.core.view.WindowInsetsCompat;
  * @author David Yusupov <dy3722@bs.amalnet.k12.il>
  * @version 1.0
  * @since 11/1/2026
- * Main Activity
+ * Credits Activity
  */
-public class MainActivity extends AppCompatActivity {
+public class CreditsActivity extends AppCompatActivity {
     Intent si;
 
+    /**
+     * Initializes the Credits activity.
+     * <p>
+     * This method sets the activity's layout to the credits screen and prepares
+     * an Intent to facilitate navigation back to the MainActivity.
+     *
+     * @param savedInstanceState If the activity is being re-initialized after previously
+     * being shut down then this Bundle contains the data it most recently supplied.
+     */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_credits);
 
-        si = new Intent(this,CreditsActivity.class);
+        si = new Intent(this,MainActivity.class);
     }
 
     /**
-     * Initialize the contents of the Activity's standard options menu.
+     * Initialize the contents of the Activity's standard options menu for the Credits screen.
      * <p>
-     * This method inflates the menu resource (R.menu.main) into the provided Menu
-     * object and adds the items to the action bar.
+     * This method inflates the menu resource (R.menu.main) and populates the menu
+     * for this activity, allowing users to access options from the credits page.
      *
      * @param menu The options menu in which you place your items.
      * @return You must return true for the menu to be displayed; if you return false it will not be shown.
@@ -45,10 +54,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This hook is called whenever an item in your options menu is selected.
+     * Handles action bar item clicks for the Credits activity.
      * <p>
-     * This implementation checks if the selected item is the "Credits" menu item
-     * and, if so, starts the activity defined by the Intent 'si'.
+     * This method intercepts clicks on the menu items. If the "Main" menu item
+     * is selected, it triggers the Intent to navigate back to the MainActivity.
      *
      * @param item The menu item that was selected.
      * @return boolean Return false to allow normal menu processing to proceed,
@@ -57,9 +66,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.menuCtedits)
+        if (id == R.id.menuMain)
         {
-            startActivity(si);
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
