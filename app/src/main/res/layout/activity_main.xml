@@ -23,7 +23,7 @@
         android:textSize="35dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvStyle"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -31,7 +31,7 @@
         android:text="Entertainment style:" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tvRE"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -43,6 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:onClick="style"
         android:text="Choice of entertainment style" />
 
     <Button
@@ -50,6 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:onClick="listRE"
         android:text="Refreshment/Equipment Menu" />
 
     <Button
@@ -57,6 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:onClick="nameQ"
         android:text="personal message" />
 
     <Button
@@ -64,5 +67,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:onClick="reset"
         android:text="Reset planning" />
 </LinearLayout>
