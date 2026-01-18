@@ -232,6 +232,7 @@ public class MainActivity extends AppCompatActivity {
                 ll.setBackgroundColor(Color.WHITE);
                 tvStyle.setText("Entertainment style:");
                 tvRE.setText("Refreshment/Equipment:");
+                Toast.makeText(MainActivity.this, "Reset was successful", Toast.LENGTH_SHORT).show();
             }
         });
         adb.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
